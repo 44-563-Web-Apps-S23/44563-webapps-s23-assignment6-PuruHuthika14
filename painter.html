@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html>
     <title>“Assignment-06"</title>
- 
-<body>
+ <body>
 <h2>Painter entry Yerragunta PuruHuthika</h2>
-
-
-
 <form>
     <label for="Painter">The hidden painter name</label>
     <input type ="password" id="Painter" name="Painter" value="Monet"> <br><br>
@@ -16,20 +12,15 @@
 
     <input type="button" onclick="checkPainter()" value="Check the guess">
 </form>
-
-
 <p id="result">The count of oops and good guess</p>
-
 <script> 
 var good = 0;
 var oops = 0;
-
 function checkPainter (){
     console.log("Getting form values")
     PainterName  = document.getElementById("Painter").value
     guesspaintername = document.getElementById("GuessPainter").value
     confirmed = confirm("Are these the values? "+PainterName+" and "+guesspaintername)
-    
     out = document.getElementById("result")
     if(PainterName == guesspaintername){
         alert("You got it right")
