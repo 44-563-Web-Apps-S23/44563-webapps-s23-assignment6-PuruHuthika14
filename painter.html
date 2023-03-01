@@ -31,12 +31,21 @@ function checkPainter (){
         alert("You got it right")
         good = good+1
         out.innerHTML = "Correct Answer: "+good+ " "+ "Wrong Answer: "+oops;
-    } else {
+    }
+    else if(oops>=10){
+        document.getElementById("btn").onclick=alertButton();
+        out.innerHTML="Correct guess: " + good + " Wrong guess: " +oops;
+
+    }
+     else {
         alert("Sorry")
         oops = oops+1
         out.innerHTML = "Correct Answer: "+good+ " "+ "Wrong Answer: "+oops;
         
     }
+}
+function alertButton(){
+    alert("Sorry, ran out of guesses.");
 }
 var useImage=1;
     function selectImage(){
