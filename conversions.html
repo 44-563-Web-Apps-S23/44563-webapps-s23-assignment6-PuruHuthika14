@@ -29,10 +29,8 @@
 </form>
 <p id="results">This text will be replaced </p>
 <script> 
-
 function convert(){
     var toShow='';
-    
     var base_input = document.getElementById("amount").value
     var conversion =document.getElementById("conv1").value 
     var base1=base_input;
@@ -54,21 +52,17 @@ function convert(){
             avg=(Number(base_input)+Number(conversion))/2
             out.innerHTML="Average of "+base_input+" and "+conversion+" is "+avg;
             
-        }
-        else if(radio2.checked){
+        }else if(radio2.checked){
             max=Math.max(base_input,conversion)
             out.innerHTML="Maximun of "+base_input+" and "+conversion+" is "+max;
             
-        }
-        else if(radio3.checked){
+        }else if(radio3.checked){
             min=Math.min(base_input,conversion)
             out.innerHTML="Minimum of "+base_input+" and "+conversion+" is "+min;
             
         }
 
     }
-
-</script>
-
+    </script>
 </body>
 </html> 
