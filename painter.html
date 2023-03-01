@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <title>“Assignment-06"</title>
+    <title>Assignment-06</title>
  <body>
 <h2>Painter entry Yerragunta PuruHuthika</h2>
 <form>
@@ -12,7 +12,12 @@
 
     <input type="button" onclick="checkPainter()" value="Check the guess">
 </form>
+
 <p id="result">The count of oops and good guess</p>
+<div class="container">
+    <img src="Euphorbia.jpg" width="100" height="100" id="image1" onclick="selectImage()">
+</div>
+
 <script> 
 var good = 0;
 var oops = 0;
@@ -33,6 +38,23 @@ function checkPainter (){
         
     }
 }
+var useImage=1;
+    function selectImage(){
+        switch(useImage){
+            case 1: 
+            useImage=2;
+            document.getElementById("image1").src="Ryder.jpg";
+            break;
+            case 2: 
+            useImage=3;
+            document.getElementById("image1").src="Galium.jpg";
+            break;
+            case 3: 
+            useImage=1;
+            document.getElementById("image1").src="Euphorbia.jpg";
+            break;
+        }
+    }
 </script>
 
 </body>
